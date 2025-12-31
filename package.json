@@ -1,0 +1,18 @@
+{
+  "name": "msw-vitest-ws-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+    "type": "module",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "msw": "^2.12.7",
+    "typescript": "~5.9.3",
+    "vitest": "^4.0.16",
+    "@vitest/browser-webdriverio": "^4.0.16"
+  }
+}
