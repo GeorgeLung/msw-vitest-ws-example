@@ -12,7 +12,11 @@ describe('validate msw & vitest & websockets (2)', () => {
       }
     })
 
-    await expect(await openPromise).toEqual(true)
+    console.log('awaiting raw websocket connection');
+    await expect(await openPromise).toEqual(true);
+
+    console.log('awaiting msw websocket connection');
+    (await client).send('some data')
   })
 
   test('twice', async ({worker}) => {
@@ -25,6 +29,10 @@ describe('validate msw & vitest & websockets (2)', () => {
       }
     })
 
-    await expect(await openPromise).toEqual(true)
+    console.log('awaiting raw websocket connection');
+    await expect(await openPromise).toEqual(true);
+
+    console.log('awaiting msw websocket connection');
+    (await client).send('some data')
   })
 })
